@@ -157,7 +157,7 @@ def validate_args(args):
                 'Output must be a directory when using --output-in.'
             )
 
-    args.destination = args.destination.resolve()
+    args.destination = args.destination.parent.resolve()
 
     # Check output flag semantics
     # FIXME: Maybe use a Default class
